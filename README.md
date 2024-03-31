@@ -35,6 +35,21 @@ $ yarn install
 ## Running the app
 
 ```bash
+# Database Configuration
+# The URI for connecting to the MongoDB database
+DATABASE_URI=mongodb://127.0.0.1:27017/simplifieduxe
+
+# AWS S3 Configuration
+# Name of the AWS S3 bucket used for storing files
+AWS_BUCKET_NAME=
+# AWS S3 access key ID for authentication
+AWS_S3_ACCESS_KEY_ID=
+# AWS S3 secret access key for authentication
+AWS_S3_SECRET_ACCESS_KEY=
+# AWS S3 region where the bucket is hosted
+AWS_S3_REGION=
+
+
 # development
 $ yarn run start
 
