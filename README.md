@@ -32,7 +32,7 @@
 $ yarn install
 ```
 
-## Running the app
+## Environment Variables
 
 ```bash
 # Database Configuration
@@ -48,8 +48,10 @@ AWS_S3_ACCESS_KEY_ID=
 AWS_S3_SECRET_ACCESS_KEY=
 # AWS S3 region where the bucket is hosted
 AWS_S3_REGION=
+```
+## Running the app
 
-
+```bash
 # development
 $ yarn run start
 
