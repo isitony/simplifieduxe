@@ -20,7 +20,10 @@ export class Question {
     questionType: string;
   
   @Prop({ type: String, required: true })
-  text: string;
+  questionText: string;
+
+  @Prop({ type: String, required: true })
+  AnswerText: string;
 
   @Prop({ type: Number, required: true })
   timer: number;
