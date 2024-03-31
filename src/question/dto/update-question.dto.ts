@@ -12,7 +12,12 @@ export class UpdateQuestionDto extends PartialType(CreateQuestionDto) {
   @ApiPropertyOptional({ description: 'The text of the question' })
   @IsOptional()
   @IsString()
-  readonly text?: string;
+  readonly questionText?: string;
+
+  @ApiPropertyOptional({ description: 'The text of the answer', example: '4' })
+  @IsOptional()
+  @IsString()
+  readonly AnswerText: string;
 
   @ApiPropertyOptional({ description: 'The timer for answering the question in seconds' })
   @IsOptional()
@@ -26,7 +31,7 @@ export class UpdateQuestionDto extends PartialType(CreateQuestionDto) {
   @Min(1)
   readonly points?: number;
 
-  @ApiPropertyOptional({ type: [String], description: 'An optional array of URLs' })
+  @ApiPropertyOptional({ type: [String], description: 'An optional array of URLs', example: ['www.example.com'] })
   @IsOptional()
   @IsArray()
   @ValidateIf((o) => o.files !== undefined)

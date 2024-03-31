@@ -11,7 +11,12 @@ export class CreateQuestionDto {
   @ApiProperty({ description: 'The text of the question', example: 'What is 2 + 2?' })
   @IsNotEmpty()
   @IsString()
-  readonly text: string;
+  readonly questionText: string;
+
+  @ApiProperty({ description: 'The text of the answer', example: '4' })
+  @IsNotEmpty()
+  @IsString()
+  readonly AnswerText: string;
 
   @ApiProperty({ description: 'The timer for answering the question in seconds', example: 30 })
   @IsNotEmpty()
@@ -25,7 +30,7 @@ export class CreateQuestionDto {
   @Min(1)
   readonly points: number;
 
-  @ApiProperty({ type: [String], description: 'An optional array of URLs' })
+  @ApiProperty({ type: [String], description: 'An optional array of URLs', example: ['www.example.com'] })
   @IsOptional()
   @IsArray()
   @IsUrl({}, { each: true, message: 'Each file must be a valid URL' })
